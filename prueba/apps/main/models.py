@@ -9,6 +9,14 @@ class Proveedor(models.Model):
     
     class Meta:
         db_table = 'vca_proveedor'
+
+
+class Cliente(models.Model):
+    codigo = models.CharField(max_length=12, db_column='clie_codi', primary_key=True ,blank=True)
+    nombre = models.CharField(max_length=200)   
+    
+    class Meta:
+        db_table = 'vca_cliente'
         
         
 class Almacen(models.Model):

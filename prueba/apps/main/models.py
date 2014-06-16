@@ -1,6 +1,12 @@
 from django.db import models
 
 # Create your models here.
+class Documento(models.Model):
+    codigo = models.CharField(max_length=12, db_column='prov_codi', primary_key=True ,blank=True)
+    nombre = models.CharField(max_length=200)   
+    
+    class Meta:
+        db_table = 'vca_proveedor'
 
 
 class Proveedor(models.Model):

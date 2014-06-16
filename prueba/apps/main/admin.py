@@ -6,5 +6,5 @@ Created on 08/06/2014
 from django.contrib import admin
 from models import Setting
 
-# Register your models here.
+# Register your models here.pppppppppppppppppppppppppppp
 admin.site.register(Setting)

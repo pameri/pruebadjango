@@ -9,6 +9,23 @@ class Documento(models.Model):
         db_table = 'vca_proveedor'
 
 
+class Documento2(models.Model):
+    codigo = models.CharField(max_length=12, db_column='prov_codi', primary_key=True ,blank=True)
+    nombre = models.CharField(max_length=200)   
+    
+    class Meta:
+        db_table = 'Documento2'
+        
+        
+class TipoDocumento(models.Model):
+    codigo = models.CharField(max_length=12, db_column='prov_codi', primary_key=True ,blank=True)
+    nombre = models.CharField(max_length=200)   
+    
+    class Meta:
+        db_table = 'TipoDocumento'
+
+
+
 class Proveedor(models.Model):
     codigo = models.CharField(max_length=12, db_column='prov_codi', primary_key=True ,blank=True)
     nombre = models.CharField(max_length=200)   

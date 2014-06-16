@@ -9,6 +9,14 @@ class MedioPago(models.Model):
     class Meta:
         db_table = 'MedioPago'
         
+
+class CtaCte(models.Model):
+    codigo = models.CharField(max_length=12, db_column='idCta', primary_key=True ,blank=True)
+    nombre = models.CharField(max_length=200)   
+    
+    class Meta:
+        db_table = 'Ctacte'
+        
         
 class PlanCuenta(models.Model):
     codigo = models.CharField(max_length=12, db_column='prov_codi', primary_key=True ,blank=True)
